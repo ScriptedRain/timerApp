@@ -12,14 +12,18 @@ const Register = () => {
   const [signedIn, setSignIn] = useState(false)
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
-    setUser(
-      signInWithPopup(Authenticate, provider).catch((err) => {
-        'null'
-      })
-    )
-    console.log(user)
-    // console.log(user.result.user.displayName)
-    setSignIn(true)
+
+    return signInWithPopup(Authenticate, provider)
+
+    // signInWithPopup(Authenticate, provider)
+    //   .catch((err) => {
+    //     'null'
+    //   })
+    //   .then(setUser)
+
+    // console.log(user)
+    // // console.log(user.result.user.displayName)
+    // setSignIn(true)
   }
 
   return (
