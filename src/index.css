@@ -9,7 +9,7 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-md bg-gray-800 hover:bg-indigo-800 text-purple-400 rounded-3xl hover:text-white hover:rounded-xl duration-300 ease-linear;
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-md bg-gray-800 hover:bg-blue-700 text-blue-400 rounded-3xl hover:text-white hover:rounded-xl duration-300 ease-linear;
   }
 
   .sidebar-tooltip {
