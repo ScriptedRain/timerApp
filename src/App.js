@@ -3,11 +3,14 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import './index.css'
 import Navbar from './Components/Navbar'
+import Sidebar from './Components/Sidebar'
 
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <div className='flex'>
+        <Sidebar />
+      </div>
       <Router>
         <Routes>
           <Route exact path='/' element={<Home />} />
