@@ -43,7 +43,7 @@ const Hero = () => {
 
                     <div class='flex items-center justify-between mt-4'>
                       <a
-                        href='#'
+                        href='/'
                         class='text-sm text-gray-600 dark:text-gray-200 hover:underline'
                       >
                         Forget Password?
