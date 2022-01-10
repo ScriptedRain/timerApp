@@ -1,81 +1,55 @@
-// import { Button1, Button2 } from './Buttons'
-import { Link } from 'react-router-dom'
-// import { authentication } from '../Firebase'
-// import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
-import { useState } from 'react/cjs/react.development'
+import { Button } from './Button'
+import Dropdown from './Dropdown'
+import Profile from './Profile'
 
-const Navbar = ({ currentPageShop }) => {
-  const [signedIn, setSignIn] = useState(false)
-
-  const signInWithGoogle = () => {
-    const provider = new GoogleAuthProvider()
-    signInWithPopup(authentication, provider).catch((err) => {
-      'null'
-    })
-    setSignIn(true)
-  }
-
+const Navbar = () => {
   return (
-    <div className=''>
-      <div className='grid grid-cols-12 gap-4 pt-4 row-span-2 grid-rows-1 pb-2 bg-gray-800'>
-        <div>
-          <a href='/' className='flex-shrink-0 flex items-center'>
-            <img
-              src='https://img.icons8.com/color/48/000000/shooting-stars.png'
-              alt='Shooting Stars'
-              className=' transform scale-75 ml-4'
-            />
-            <h1 className='text-gray-200 font-mono font-extrabold antialiased text-2xl hidden lg:block h-8 w-auto ml-3 mb-1'>
-              BKSA
-            </h1>
-          </a>
-        </div>
-        <div className='flex'>
-          <div className='ml-8 mr-2'>
-            <Link to='/shop'>
-              <Button1 name='shop' />
-            </Link>
-          </div>
-          <div>
-            <Link to='/team'>
-              {currentPageShop ? (
-                <Button2 name='Team' />
-              ) : (
-                <Button1 name='Team' />
-              )}
-            </Link>
-          </div>
-        </div>
-        <div className='col-start-10 col-span-2'>
-          {signedIn === true ? (
-            <button
-              type='button'
-              onClick={signInWithGoogle}
-              className='flex items-center justify-center w-full px-6 py-2.5 mr-2 ml-24 text-sm font-medium text-white transition-colors duration-200 transform bg-indigo-600 rounded-md hover:bg-indigo-400 focus:bg-blue-400 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed'
-              disabled
-            >
-              <svg class='w-4 h-4 mx-2 fill-current' viewBox='0 0 24 24'>
-                <path d='M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z'></path>
-              </svg>
+    <nav className='bg-white shadow sticky dark:bg-gray-800 top-0 opacity-75 bg-clip-padding blur-bg'>
+      <div className='container px-6 py-4 mx-auto'>
+        <div className='md:flex md:items-center md:justify-between'>
+          <div className='flex items-center justify-between'>
+            <div className='text-xl font-semibold text-gray-700'>
+              <a
+                className='text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300'
+                href='/'
+              >
+                Brand
+              </a>
+            </div>
 
-              <span class='hidden mx-2 sm:inline'>Signed in</span>
-            </button>
-          ) : (
-            <button
-              type='button'
-              onClick={signInWithGoogle}
-              class='flex items-center justify-center w-full px-6 py-2.5 mr-2 ml-24 text-sm font-medium text-white transition-colors duration-200 transform bg-indigo-600 rounded-md hover:bg-indigo-400 focus:bg-blue-400 focus:outline-none'
-            >
-              <svg class='w-4 h-4 mx-2 fill-current' viewBox='0 0 24 24'>
-                <path d='M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z'></path>
-              </svg>
+            <div className='flex md:hidden'>
+              <button
+                type='button'
+                className='text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400'
+                aria-label='toggle menu'
+              >
+                <svg viewBox='0 0 24 24' className='w-6 h-6 fill-current'>
+                  <path
+                    fill-rule='evenodd'
+                    d='M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z'
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-              <span class='hidden mx-2 sm:inline'>Sign in with Google</span>
-            </button>
-          )}
+          <div className='flex-1 md:flex md:items-center md:justify-between'>
+            <div className='flex flex-col-mx-4 space-x-4 md:flex-row md:items-center md:mx-8'>
+              <a href='/about'>
+                <Button name='About us' />
+              </a>
+              <a href='/about'>
+                <Button name='App' />
+              </a>
+            </div>
+
+            <div className='flex items-center mt-4 md:mt-0'>
+              <Dropdown e={Profile} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 
