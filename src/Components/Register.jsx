@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRef, useState } from 'react'
 
-import { Button2 } from './Button'
 import { FcGoogle } from 'react-icons/fc'
 import { auth as Authenticate } from '../firebase-config'
 import { signup, login, logout, useAuth } from '../firebase-config'
@@ -64,24 +63,24 @@ const Register = () => {
   }
 
   return (
-    <div class='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
-      <div class='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
-        <div class='p-5 text-center'>
-          <h2 class='text-2xl font-semibold text-gray-700 dark:text-white fo'>
+    <div className='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
+      <div className='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
+        <div className='p-5 text-center'>
+          <h2 className='text-2xl font-semibold text-gray-700 dark:text-white fo'>
             Sign Up
           </h2>
 
           <form action='#'>
-            <div class='mt-4'>
+            <div className='mt-4'>
               <input
-                class='block w-full px-4 py-2 text-white placeholder-gray-500 border rounded-md bg-gray-800 border-gray-600  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
+                className='block w-full px-4 py-2 text-white placeholder-gray-500 border rounded-md bg-gray-800 border-gray-600  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
                 type='email'
                 placeholder='Email address'
                 aria-label='Email address'
                 ref={emailRef}
               ></input>
               <input
-                class='block w-full px-4 py-2 mt-4 text-white placeholder-gray-500  border rounded-md bg-gray-800 border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
+                className='block w-full px-4 py-2 mt-4 text-white placeholder-gray-500  border rounded-md bg-gray-800 border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
                 type='password'
                 placeholder='Password'
                 aria-label='Password'
@@ -89,19 +88,18 @@ const Register = () => {
               ></input>
             </div>
             <div className='flex space-x-2 my-2 '>
-              <Button2
-                name={<FcGoogle className='w-full h-5 ' />}
-                className={
-                  'transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'
-                }
-                onClick={signInWithGoogle}
-              />
+              <button disabled={loading || currentUser != null} onClick={signInWithGoogle} className={' disabled:opacity-50 disabled:cursor-not-allowed py-2 px-4 rounded inline-flex items-center font-medium tracking-wide text-white capitalize transition duration-200 transform bg-gray-900 hover:bg-gray-700 focus:ring-indigo-300 focus:ring-opacity-80 ease-in-out hover:scale-110 '}>
+                 <FcGoogle className='w-full h-5 ' />
+                
+              
+                
+              </button>
             </div>
 
-            <div class='flex items-center justify-between mt-4'>
+            <div className='flex items-center justify-between mt-4'>
               <a
                 href='/'
-                class='text-sm text-gray-600 dark:text-gray-200 hover:underline'
+                className='text-sm text-gray-600 dark:text-gray-200 hover:underline'
               >
                 Forget Password?
               </a>

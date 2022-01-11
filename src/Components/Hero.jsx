@@ -6,20 +6,20 @@ const Hero = () => {
 
   return (
     <div>
-      <header class='bg-gray-900 pattern'>
-        <div class='container px-6 mx-auto'>
-          <div class='flex flex-col items-center py-6 lg:h-screen lg:flex-row'>
-            <div class='lg:w-1/2'>
-              <h2 class='text-4xl font-semibold text-gray-100'>Dynamik</h2>
+      <header className='bg-gray-900 pattern'>
+        <div className='container px-6 mx-auto'>
+          <div className='flex flex-col items-center py-6 lg:h-screen lg:flex-row'>
+            <div className='lg:w-1/2'>
+              <h2 className='text-4xl font-semibold text-gray-100'>Dynamik</h2>
 
-              <h3 class='text-2xl font-semibold text-gray-100'>
+              <h3 className='text-2xl font-semibold text-gray-100'>
                 Hello there{' '}
-                <span class='text-blue-400'>
+                <span className='text-blue-400'>
                   {currentUser ? currentUser?.email : 'Guest'}
                 </span>
               </h3>
 
-              <p class='mt-3 text-gray-100'>
+              <p className='mt-3 text-gray-100'>
                 Welcome to the ultimate productivity app, the only app you will
                 ever need to stay productive. Now you don't have to have
                 seperate apps for a calendar, timer and tasks to manage.
