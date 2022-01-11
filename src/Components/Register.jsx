@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import { Button2 } from './Button'
 import { FcGoogle } from 'react-icons/fc'
 import { auth as Authenticate } from '../firebase-config'
-import { signup } from '../firebase-config'
+import { signup, useAuth } from '../firebase-config'
 
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
@@ -13,6 +13,7 @@ const Register = () => {
   const [user, setUser] = useState(null)
   const [signedIn, setSignIn] = useState(false)
   const[loading, setLoading] = useState(false)
+  const currentUser = useAuth()
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
 
@@ -87,7 +88,7 @@ const Register = () => {
                 Forget Password?
               </a>
 
-              <button disabled={loading} onClick={handleSignup}  className=' disabled:opacity-50 px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button disabled={loading || currentUser != null} onClick={handleSignup}  className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Sign up
               </button>
             </div>
