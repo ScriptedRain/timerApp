@@ -89,13 +89,12 @@ const Register = () => {
               ></input>
             </div>
             <div className='flex space-x-2 my-2 '>
-              <Button2
-                name={<FcGoogle className='w-full h-5 ' />}
-                className={
-                  'transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'
-                }
-                onClick={signInWithGoogle}
-              />
+              <button disabled={loading || currentUser != null} onClick={signInWithGoogle} className={' disabled:opacity-50 disabled:cursor-not-allowed py-2 px-4 rounded inline-flex items-center font-medium tracking-wide text-white capitalize transition duration-200 transform bg-gray-900 hover:bg-gray-700 focus:ring-indigo-300 focus:ring-opacity-80 ease-in-out hover:scale-110 '}>
+                 <FcGoogle className='w-full h-5 ' />
+                
+              
+                
+              </button>
             </div>
 
             <div class='flex items-center justify-between mt-4'>
