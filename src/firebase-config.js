@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
+import { useState } from 'react/cjs/react.development'
+import { useEffect } from 'react'
 const firebaseConfig = {
   apiKey: 'AIzaSyDBQw6o7LYHX6O6rfTp7Ms_3huVLgv2Tgk',
   authDomain: 'timer-app-9c40c.firebaseapp.com',
@@ -10,5 +12,19 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
-
 export const auth = getAuth(app)
+
+export function signup(email, password) {
+  return createUserWithEmailAndPassword(auth, email, password)
+}
+
+export function useAuth() {
+  const [currentUser, setCurrentUser] = useState()
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, user => setCurrentUser(user))
+    return unsub
+  }, [])
+
+  return currentUser
+}

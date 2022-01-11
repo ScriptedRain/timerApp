@@ -2,8 +2,11 @@ import React from 'react'
 import { Button2 } from './Button'
 import { FcGoogle } from 'react-icons/fc'
 import Register from './Register'
-import { auth } from '../firebase-config'
+import { useAuth } from '../firebase-config'
 const Hero = () => {
+
+  const currentUser = useAuth()
+
   return (
     <div>
       <header class='bg-gray-900 pattern'>
@@ -13,7 +16,7 @@ const Hero = () => {
               <h2 class='text-4xl font-semibold text-gray-100'>Dynamik</h2>
 
               <h3 class='text-2xl font-semibold text-gray-100'>
-                Welcome back <span class='text-blue-400'>{}</span>
+                Welcome back <span class='text-blue-400'>{currentUser?.email}</span>
               </h3>
 
               <p class='mt-3 text-gray-100'>
