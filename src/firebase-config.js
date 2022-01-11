@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { useState } from 'react/cjs/react.development'
 import { useEffect } from 'react'
 const firebaseConfig = {
@@ -16,6 +16,10 @@ export const auth = getAuth(app)
 
 export function signup(email, password) {
   return createUserWithEmailAndPassword(auth, email, password)
+}
+
+export function logout() {
+  return signOut(auth)
 }
 
 export function useAuth() {
