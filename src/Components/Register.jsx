@@ -64,24 +64,24 @@ const Register = () => {
   }
 
   return (
-    <div class='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
-      <div class='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
-        <div class='p-5 text-center'>
-          <h2 class='text-2xl font-semibold text-gray-700 dark:text-white fo'>
+    <div className='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
+      <div className='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
+        <div className='p-5 text-center'>
+          <h2 className='text-2xl font-semibold text-gray-700 dark:text-white fo'>
             Sign Up
           </h2>
 
           <form action='#'>
-            <div class='mt-4'>
+            <div className='mt-4'>
               <input
-                class='block w-full px-4 py-2 text-white placeholder-gray-500 border rounded-md bg-gray-800 border-gray-600  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
+                className='block w-full px-4 py-2 text-white placeholder-gray-500 border rounded-md bg-gray-800 border-gray-600  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
                 type='email'
                 placeholder='Email address'
                 aria-label='Email address'
                 ref={emailRef}
               ></input>
               <input
-                class='block w-full px-4 py-2 mt-4 text-white placeholder-gray-500  border rounded-md bg-gray-800 border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
+                className='block w-full px-4 py-2 mt-4 text-white placeholder-gray-500  border rounded-md bg-gray-800 border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
                 type='password'
                 placeholder='Password'
                 aria-label='Password'
@@ -97,10 +97,10 @@ const Register = () => {
               </button>
             </div>
 
-            <div class='flex items-center justify-between mt-4'>
+            <div className='flex items-center justify-between mt-4'>
               <a
                 href='/'
-                class='text-sm text-gray-600 dark:text-gray-200 hover:underline'
+                className='text-sm text-gray-600 dark:text-gray-200 hover:underline'
               >
                 Forget Password?
               </a>
