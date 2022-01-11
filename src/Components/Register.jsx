@@ -64,9 +64,9 @@ const Register = () => {
 
   return (
     <div className='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
-      <div className='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
+      <div className='max-w-sm rounded-lg bg-gray-800'>
         <div className='p-5 text-center'>
-          <h2 className='text-2xl font-semibold text-gray-700 dark:text-white fo'>
+          <h2 className='text-2xl font-semibold text-white fo'>
             Sign Up / Log In
           </h2>
 
