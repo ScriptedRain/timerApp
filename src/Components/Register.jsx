@@ -49,7 +49,7 @@ const Register = () => {
                 aria-label='Password'
               ></input>
             </div>
-            <div className='flex space-x-2 my-2'>
+            <div className='flex space-x-2 my-2 '>
               <Button2
                 name={<FcGoogle className='w-full h-5 ' />}
                 className={
