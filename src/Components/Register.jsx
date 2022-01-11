@@ -67,7 +67,7 @@ const Register = () => {
       <div className='max-w-sm bg-white rounded-lg dark:bg-gray-800'>
         <div className='p-5 text-center'>
           <h2 className='text-2xl font-semibold text-gray-700 dark:text-white fo'>
-            Sign Up
+            Sign Up / Log In
           </h2>
 
           <form action='#'>
@@ -97,17 +97,10 @@ const Register = () => {
             </div>
 
             <div className='flex items-center justify-between mt-4'>
-              <a
-                href='/'
-                className='text-sm text-gray-600 dark:text-gray-200 hover:underline'
-              >
-                Forget Password?
-              </a>
-
               <button
                 disabled={loading || currentUser != null}
                 onClick={handleSignup}
-                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
               >
                 Sign up
               </button>
@@ -115,7 +108,7 @@ const Register = () => {
               <button
                 disabled={loading || currentUser}
                 onClick={handleLogin}
-                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 mr-3 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
               >
                 Log In
               </button>
@@ -124,7 +117,7 @@ const Register = () => {
               <button
                 disabled={loading || !currentUser}
                 onClick={handleLogout}
-                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
               >
                 Log out
               </button>
