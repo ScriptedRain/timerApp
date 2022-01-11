@@ -13,7 +13,7 @@ const Hero = () => {
               <h2 class='text-4xl font-semibold text-gray-100'>Dynamik</h2>
 
               <h3 class='text-2xl font-semibold text-gray-100'>
-                Hello there,{' '}
+                Hello there{' '}
                 <span class='text-blue-400'>
                   {currentUser ? currentUser?.email : 'Guest'}
                 </span>
