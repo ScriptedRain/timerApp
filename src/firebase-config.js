@@ -1,7 +1,13 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth'
-import { useState } from 'react/cjs/react.development'
-import { useEffect } from 'react'
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+  signInWithEmailAndPassword,
+} from 'firebase/auth'
+import { useState, useEffect } from 'react'
+
 const firebaseConfig = {
   apiKey: 'AIzaSyDBQw6o7LYHX6O6rfTp7Ms_3huVLgv2Tgk',
   authDomain: 'timer-app-9c40c.firebaseapp.com',
@@ -30,7 +36,7 @@ export function useAuth() {
   const [currentUser, setCurrentUser] = useState()
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, user => setCurrentUser(user))
+    const unsub = onAuthStateChanged(auth, (user) => setCurrentUser(user))
     return unsub
   }, [])
 
