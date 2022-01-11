@@ -1,6 +1,4 @@
 import React from 'react'
-import { Button2 } from './Button'
-import { FcGoogle } from 'react-icons/fc'
 import Register from './Register'
 import { useAuth } from '../firebase-config'
 const Hero = () => {

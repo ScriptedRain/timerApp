@@ -4,7 +4,7 @@ import {
   AiOutlineTeam,
   AiFillCalendar,
   AiFillClockCircle,
-  AiOutlineRadiusSetting,
+  // AiOutlineRadiusSetting,
 } from 'react-icons/ai'
 import { FiSettings } from 'react-icons/fi'
 const Sidebar = () => {

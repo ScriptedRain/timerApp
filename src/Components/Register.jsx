@@ -8,11 +8,10 @@ import { signup, login, logout, useAuth } from '../firebase-config'
 
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
-
 const Register = () => {
-  const [user, setUser] = useState(null)
-  const [signedIn, setSignIn] = useState(false)
-  const[loading, setLoading] = useState(false)
+  // const [user, setUser] = useState(null)
+  // const [signedIn, setSignIn] = useState(false)
+  const [loading, setLoading] = useState(false)
   const currentUser = useAuth()
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
@@ -39,10 +38,9 @@ const Register = () => {
     try {
       await signup(emailRef.current.value, passwordRef.current.value)
     } catch {
-      alert("Error!")
+      alert('Error!')
     }
     setLoading(false)
-    
   }
 
   async function handleLogin() {
@@ -51,10 +49,9 @@ const Register = () => {
     try {
       await login(emailRef.current.value, passwordRef.current.value)
     } catch {
-      alert("Error!")
+      alert('Error!')
     }
     setLoading(false)
-    
   }
 
   async function handleLogout() {
@@ -62,7 +59,7 @@ const Register = () => {
     try {
       await logout()
     } catch {
-      alert("Error!")
+      alert('Error!')
     }
   }
 
@@ -103,23 +100,34 @@ const Register = () => {
 
             <div class='flex items-center justify-between mt-4'>
               <a
-                href='#'
+                href='/'
                 class='text-sm text-gray-600 dark:text-gray-200 hover:underline'
               >
                 Forget Password?
               </a>
 
-              <button disabled={loading || currentUser != null} onClick={handleSignup}  className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button
+                disabled={loading || currentUser != null}
+                onClick={handleSignup}
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+              >
                 Sign up
               </button>
 
-              
-              <button disabled={loading || currentUser} onClick={handleLogin} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button
+                disabled={loading || currentUser}
+                onClick={handleLogin}
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+              >
                 Log In
               </button>
             </div>
             <div className='flex items-center mt-1'>
-            <button disabled={loading || !currentUser} onClick={handleLogout} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button
+                disabled={loading || !currentUser}
+                onClick={handleLogout}
+                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'
+              >
                 Log out
               </button>
             </div>
