@@ -6,39 +6,39 @@ const About = () => {
             <div className="flex flex-col lg:flex-row justify-between gap-8">
                 <div className="w-full lg:w-5/12 flex flex-col justify-center pb-48">
                     <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-white pb-4">About Us</h1>
-                    <p className="font-normal text-base leading-6 text-gray-400 ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+                    <p className="font-normal text-base leading-6 text-gray-400 ">This is an application made by developers who are trying to create an app that is simplified for the user whilst it provides all the important features with an option to see all the new features but its an optional so you can have all the key features without being hassled by new upcoming features.</p>
                 </div>
                 <div className="w-full lg:w-8/12 ">
-                    <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+                    <img className="w-full h-full" src="https://cdn.vox-cdn.com/thumbor/ZtuTAA_h95ICMjg2qfre8vRfT1E=/0x0:2379x1974/1200x800/filters:focal(928x239:1308x619)/cdn.vox-cdn.com/uploads/chorus_image/image/67760845/AP19038765823578.0.jpg" alt="A group of People" />
                 </div>
             </div>
 
             <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
                 <div className="w-full lg:w-5/12 flex flex-col justify-center pt-12">
-                    <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-white pb-4">Our Story</h1>
-                    <p className="font-normal text-base leading-6 text-gray-400 ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+                    <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-white pb-4">Why we did this?</h1>
+                    <p className="font-normal text-base leading-6 text-gray-400 ">We wanted to create an app that can be used instead of three different applications. We have had enough of having to change everytime we want to add a task to a list or schedule an event in our calendar or even set a timer. Thats why we created this web-app, so you won't have to go the effort of using three different PRE-INSTALLED APPLICATIONS ON YOUR IPHONES. YOU LAZY PEOPLE.</p>
                 </div>
                 <div className="w-full lg:w-8/12 lg:pt-8">
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="md:block hidden" src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png" alt="Alexa featured Img" />
-                            <img className="md:hidden block" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png" alt="Alexa featured Img" />
-                            <p className="font-medium text-xl leading-5 text-white mt-4">Alexa</p>
+                            <img className="md:block hidden" src="https://celebslifereel.com/wp-content/uploads/2020/03/Brooke-Monk.jpg" alt="Rain featured Img" />
+                            <img className="md:hidden block" src="https://celebslifereel.com/wp-content/uploads/2020/03/Brooke-Monk.jpg" alt="Rain featured Img" />
+                            <p className="font-medium text-xl leading-5 text-white mt-4">Rain</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="md:block hidden" src="https://i.ibb.co/fGmxhVy/Rectangle-119.png" alt="Olivia featured Img" />
-                            <img className="md:hidden block" src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png" alt="Olivia featured Img" />
-                            <p className="font-medium text-xl leading-5 text-white mt-4">Olivia</p>
+                            <img className="md:block hidden" src="https://cdn.allfamous.org/people/avatars/lexi-rivera-mjwm-allfamous.org.jpg" alt="GhostReaper46 featured Img" />
+                            <img className="md:hidden block" src="https://cdn.allfamous.org/people/avatars/lexi-rivera-mjwm-allfamous.org.jpg" alt="GhostReaper46 featured Img" />
+                            <p className="font-medium text-xl leading-5 text-white mt-4">GhostReaper46</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="md:block hidden" src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png" alt="Liam featued Img" />
-                            <img className="md:hidden block" src="https://i.ibb.co/C5MMBcs/Rectangle-120.png" alt="Liam featued Img" />
-                            <p className="font-medium text-xl leading-5 text-white mt-4">Liam</p>
+                            <img className="md:block hidden" src="https://cdn.allfamous.org/people/avatars/erika-costell-musx-allfamous.org.jpg" alt="Krishp058 featued Img" />
+                            <img className="md:hidden block" src="https://cdn.allfamous.org/people/avatars/erika-costell-musx-allfamous.org.jpg" alt="Krishp058 featued Img" />
+                            <p className="font-medium text-xl leading-5 text-white mt-4">Krishp058</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="md:block hidden" src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png" alt="Elijah featured img" />
-                            <img className="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png" alt="Elijah featured img" />
-                            <p className="font-medium text-xl leading-5 text-white mt-4">Elijah</p>
+                            <img className="md:block hidden" src="https://yt3.ggpht.com/ytc/AKedOLTlrMxdfc6KqE2z3EImPo90W4FHHiueKNG-ZMKALw=s900-c-k-c0x00ffffff-no-rj" alt="BlazEXE Fire featured img" />
+                            <img className="md:hidden block" src="https://yt3.ggpht.com/ytc/AKedOLTlrMxdfc6KqE2z3EImPo90W4FHHiueKNG-ZMKALw=s900-c-k-c0x00ffffff-no-rj" alt="BlazEXE Fire featured img" />
+                            <p className="font-medium text-xl leading-5 text-white mt-4">BlazEXE Fire</p>
                         </div>
                     </div>
                 </div>
