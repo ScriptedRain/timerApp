@@ -4,7 +4,6 @@ import { FcGoogle } from 'react-icons/fc'
 import Register from './Register'
 import { useAuth } from '../firebase-config'
 const Hero = () => {
-
   const currentUser = useAuth()
 
   return (
@@ -16,7 +15,10 @@ const Hero = () => {
               <h2 class='text-4xl font-semibold text-gray-100'>Dynamik</h2>
 
               <h3 class='text-2xl font-semibold text-gray-100'>
-                Welcome back <span class='text-blue-400'>{currentUser?.email}</span>
+                Hello there,{' '}
+                <span class='text-blue-400'>
+                  {currentUser ? currentUser?.email : 'Guest'}
+                </span>
               </h3>
 
               <p class='mt-3 text-gray-100'>
