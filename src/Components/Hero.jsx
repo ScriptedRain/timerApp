@@ -13,7 +13,11 @@ const Hero = () => {
               <h2 className='text-4xl font-semibold text-gray-100'>Dynamik</h2>
 
               <h3 className='text-2xl font-semibold text-gray-100'>
+<<<<<<< Updated upstream
                 Hello there{' '}
+=======
+                Hello there,{' '}
+>>>>>>> Stashed changes
                 <span className='text-blue-400'>
                   {currentUser ? currentUser?.email : 'Guest'}
                 </span>
