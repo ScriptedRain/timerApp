@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRef, useState } from 'react'
 
-import { Button2 } from './Button'
 import { FcGoogle } from 'react-icons/fc'
 import { auth as Authenticate } from '../firebase-config'
 import { signup, login, logout, useAuth } from '../firebase-config'
