@@ -24,7 +24,7 @@ const Sidebar = () => {
       <SideBarIcon
         icon={<AiOutlineTeam size='28' />}
         text='About Us'
-        to={'/about'}
+        to={'/About'}
       />
       <SideBarIcon
         icon={<FiSettings size='28' />}
