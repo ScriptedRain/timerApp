@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import { Button2 } from './Button'
 import { FcGoogle } from 'react-icons/fc'
 import { auth as Authenticate } from '../firebase-config'
-import { signup, logout, useAuth } from '../firebase-config'
+import { signup, login, logout, useAuth } from '../firebase-config'
 
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
@@ -38,6 +38,18 @@ const Register = () => {
 
     try {
       await signup(emailRef.current.value, passwordRef.current.value)
+    } catch {
+      alert("Error!")
+    }
+    setLoading(false)
+    
+  }
+
+  async function handleLogin() {
+    setLoading(true)
+
+    try {
+      await login(emailRef.current.value, passwordRef.current.value)
     } catch {
       alert("Error!")
     }
@@ -101,11 +113,15 @@ const Register = () => {
                 Sign up
               </button>
 
-              <button disabled={loading || !currentUser} onClick={handleLogout} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              
+              <button disabled={loading || currentUser} onClick={handleLogin} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 ml-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+                Log In
+              </button>
+            </div>
+            <div className='flex items-center mt-1'>
+            <button disabled={loading || !currentUser} onClick={handleLogout} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Log out
               </button>
-              
-
             </div>
           </form>
         </div>
