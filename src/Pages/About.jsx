@@ -113,7 +113,7 @@ const About = () => {
                 color={
                   'max-w-xs mx-auto overflow-hidden bg-green-400 rounded-lg shadow-lg shadow-green-500/50'
                 }
-                task={'Developer'}
+                task={'Developer/Researcher'}
                 img={
                   'https://cdn.allfamous.org/people/avatars/erika-costell-musx-allfamous.org.jpg'
                 }
