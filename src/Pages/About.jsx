@@ -90,7 +90,9 @@ const About = () => {
             <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 rounded-md'>
               <Card1
                 name={'Rain'}
-                color={'red'}
+                color={
+                  'max-w-xs mx-auto overflow-hidden bg-red-400 rounded-lg shadow-lg shadow-red-500/50'
+                }
                 task={'Head Developer'}
                 img={
                   'https://celebslifereel.com/wp-content/uploads/2020/03/Brooke-Monk.jpg'
@@ -98,7 +100,9 @@ const About = () => {
               />
               <Card1
                 name={'GhostReaper46'}
-                color={'blue'}
+                color={
+                  'max-w-xs mx-auto overflow-hidden bg-blue-400 rounded-lg shadow-lg shadow-blue-500/50'
+                }
                 task={'Resource manager / developer'}
                 img={
                   'https://www.thefamouspeople.com/profiles/images/emma-brooks-mcallister-120292-1.jpg'
@@ -106,7 +110,9 @@ const About = () => {
               />
               <Card1
                 name={'Krishp058'}
-                color={'green'}
+                color={
+                  'max-w-xs mx-auto overflow-hidden bg-green-400 rounded-lg shadow-lg shadow-green-500/50'
+                }
                 task={'Developer'}
                 img={
                   'https://cdn.allfamous.org/people/avatars/erika-costell-musx-allfamous.org.jpg'
@@ -114,7 +120,9 @@ const About = () => {
               />
               <Card1
                 name={'BlazEXE Fire'}
-                color={'yellow'}
+                color={
+                  'max-w-xs mx-auto overflow-hidden bg-yellow-400 rounded-lg shadow-lg shadow-yellow-500/50'
+                }
                 task={'Invester & accountant'}
                 img={
                   'https://img.republicworld.com/republic-prod/stories/images/15898683605ec37748871a0.jpg'
