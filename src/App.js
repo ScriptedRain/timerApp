@@ -3,6 +3,7 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import './index.css'
 import Sidebar from './Components/Sidebar'
+import { Calendar } from './Pages/Calendar'
 
 function App() {
   return (
@@ -13,9 +14,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Home />} />
-
-          <Route path='/About' element={<About />} />
-          <Route path='/Team'>{/* <Team /> */}</Route>
+          <Route path='/about' element={<About />} />
+          <Route path='/calendar' element={<Calendar />} />
         </Routes>
       </Router>
     </div>
