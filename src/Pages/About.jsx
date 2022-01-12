@@ -109,7 +109,7 @@ const About = () => {
                 color={'green'}
                 task={'Developer'}
                 img={
-                  'https://cdn.allfamous.org/people/avatars/erika-costell-musx-allfamous.org.jpg'
+                  'https://assets.teenvogue.com/photos/609bd38c0c757ccf162d4ef9/1:1/w_1847,h_1847,c_limit/1317477500'
                 }
               />
               <Card1
