@@ -48,7 +48,7 @@ const About = () => {
     // </div>
 
     <Pattern>
-      <div className='  2xl:container 2xl:mx-auto lg:px-20 md:py-12 md:px-6 py-9 px-4'>
+      <div className='  2xl:container 2xl:mx-auto lg:px-20 md:py-12 md:px-6 sm:h-screen py-9 px-4'>
         <div className='flex flex-col lg:flex-row justify-between gap-8'>
           <div className='w-full lg:w-5/12 flex flex-col justify-center pb-48'>
             <h1 className='text-3xl lg:text-4xl font-bold leading-9 text-white pb-4'>
@@ -87,7 +87,7 @@ const About = () => {
             </p>
           </div>
           <div className='w-full lg:w-8/12 lg:pt-8'>
-            <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 rounded-md'>
+            <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:space-x-4 md:space-x-4 sm:space-x-4 rounded-md'>
               <Card1
                 name={'Rain'}
                 color={
