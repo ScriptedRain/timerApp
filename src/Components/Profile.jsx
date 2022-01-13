@@ -1,9 +1,11 @@
 import React from 'react'
+import { useAuth } from '../Contexts/UserContext'
 
 const Profile = () => {
+  const { currentUser } = useAuth()
   return (
     <div>
-      <button
+      {/* <button
         type='button'
         className='flex items-center focus:outline-none'
         aria-label='toggle profile dropdown'
@@ -15,7 +17,8 @@ const Profile = () => {
             alt='avatar'
           ></img>
         </div>
-      </button>
+      </button> */}
+      <h1 className='text-center'>{JSON.stringify(currentUser, null, 2)}</h1>
     </div>
   )
 }

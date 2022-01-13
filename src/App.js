@@ -6,6 +6,7 @@ import Sidebar from './Components/Sidebar'
 import { Calendar } from './Pages/Calendar'
 import Todo from './Pages/Todo'
 import AuthContextProvider from './Contexts/UserContext'
+import Settings from './Pages/Settings'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/calendar' element={<Calendar />} />
             <Route path='/todo' element={<Todo />} />
+            <Route path='/settings' element={<Settings />} />
           </Routes>
         </AuthContextProvider>
       </Router>
