@@ -4,6 +4,7 @@ import About from './Pages/About'
 import './index.css'
 import Sidebar from './Components/Sidebar'
 import { Calendar } from './Pages/Calendar'
+import Todo from './Pages/Todo'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/calendar' element={<Calendar />} />
+          <Route path='/todo' element={<Todo />} />
         </Routes>
       </Router>
     </div>
