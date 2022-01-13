@@ -53,7 +53,9 @@ const Register = () => {
               </button>
             </div>
             <div className='flex items-center mt-1'>
-              <button onClick={async (e) => {
+              <button 
+                  disabled={!currentUser}
+                  onClick={async (e) => {
                   e.preventDefault()
                   logout()}} 
                 className=' disabled:opacity-50 disabled:cursor-not-allowed w-full px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
