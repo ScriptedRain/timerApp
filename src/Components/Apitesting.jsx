@@ -60,9 +60,9 @@ const Register = () => {
                 Log out
               </button>
             </div>
-            <div class="flex my-4 items-center text-center">
-                <hr class="border-gray-300 border-1 w-full rounded-md"/>
-                <label class="block font-medium text-sm text-white w-full">
+            <div className="flex my-4 items-center text-center">
+                <hr className="border-gray-300 border-1 w-full rounded-md"/>
+                <label className="block font-medium text-sm text-white w-full">
                     OR
                 </label>
                 <hr class="border-gray-300 border-1 w-full rounded-md"/>
@@ -70,6 +70,7 @@ const Register = () => {
             
             <div className='flex space-x-2 my-2 '>
               <button
+                disabled={currentUser != null}
                 onClick={() => signInWithGoogle()}
                 className={
                   ' disabled:opacity-50 disabled:cursor-not-allowed w-full inline-flex py-2 px-4 rounded items-center font-medium text-white capitalize transition duration-200 transform bg-red-700 hover:bg-red-900 focus:ring-indigo-300 focus:ring-opacity-80 '
