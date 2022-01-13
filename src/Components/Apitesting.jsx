@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-import { FcGoogle } from 'react-icons/fc'
+import { AiOutlineGoogle } from 'react-icons/ai'
 import { useAuth } from '../Contexts/UserContext'
 
 
@@ -47,19 +47,8 @@ const Register = () => {
                 aria-label='Password'
               ></input>
             </div>
-            <div className='flex space-x-2 my-2 '>
-              <button
-                onClick={() => signInWithGoogle()}
-                className={
-                  ' disabled:opacity-50 disabled:cursor-not-allowed py-2 px-4 rounded inline-flex items-center font-medium tracking-wide text-white capitalize transition duration-200 transform bg-gray-900 hover:bg-gray-700 focus:ring-indigo-300 focus:ring-opacity-80 ease-in-out hover:scale-110 '
-                }
-              >
-                <FcGoogle className='w-full h-5 ' />
-              </button>
-            </div>
-
             <div className='flex items-center justify-between mt-4'>
-              <button disabled={currentUser != null} className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button disabled={currentUser != null} className='w-full disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Sign up
               </button>
             </div>
@@ -67,8 +56,27 @@ const Register = () => {
               <button onClick={async (e) => {
                   e.preventDefault()
                   logout()}} 
-                className=' disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+                className=' disabled:opacity-50 disabled:cursor-not-allowed w-full px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Log out
+              </button>
+            </div>
+            <div class="flex my-4 items-center text-center">
+                <hr class="border-gray-300 border-1 w-full rounded-md"/>
+                <label class="block font-medium text-sm text-white w-full">
+                    OR
+                </label>
+                <hr class="border-gray-300 border-1 w-full rounded-md"/>
+            </div>
+            
+            <div className='flex space-x-2 my-2 '>
+              <button
+                onClick={() => signInWithGoogle()}
+                className={
+                  ' disabled:opacity-50 disabled:cursor-not-allowed w-full inline-flex py-2 px-4 rounded items-center font-medium text-white capitalize transition duration-200 transform bg-red-700 hover:bg-red-900 focus:ring-indigo-300 focus:ring-opacity-80 '
+                }
+              >
+                <AiOutlineGoogle className=' h-5 ' />
+                <div className='ml-2'>Sign in with google</div>
               </button>
             </div>
           </form>
