@@ -30,13 +30,13 @@ const Register = () => {
                 .catch((err) => console.log(err.message))
             }}
           >
-            <div className='mt-4'>
+            <div className=' mt-4'>
               <input
                 className='block w-full px-4 py-2 text-white placeholder-gray-500 border rounded-md bg-gray-800 border-gray-600  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder='Email address'
-                aria-label='Email address'
+                placeholder='Email Address'
+                aria-label='Email Address'
               ></input>
               <input
                 className='block w-full px-4 py-2 mt-4 text-white placeholder-gray-500  border rounded-md bg-gray-800 border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring'
@@ -48,7 +48,7 @@ const Register = () => {
               ></input>
             </div>
             <div className='flex items-center justify-between mt-4'>
-              <button disabled={currentUser != null} className='w-full disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+              <button disabled={currentUser != null} className=' capitalize w-full disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Sign up
               </button>
             </div>
@@ -66,7 +66,7 @@ const Register = () => {
                   onClick={async (e) => {
                   e.preventDefault()
                   logout()}} 
-                className=' disabled:opacity-50 disabled:cursor-not-allowed w-full px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
+                className=' capitalize disabled:opacity-50 disabled:cursor-not-allowed w-full px-4 py-2 mt-2 font-semibold text-white transition-cxolors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700'>
                 Log out
               </button>
             </div>
