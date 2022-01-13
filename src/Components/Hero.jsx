@@ -1,10 +1,9 @@
 import React from 'react'
 import Register from './Register'
-import { useAuth } from '../firebase-config'
 import Pattern from './Pattern'
 import Apitesting from './Apitesting'
 const Hero = () => {
-  const currentUser = useAuth()
+  const currentUser = useUser()
 
   return (
     <Pattern>

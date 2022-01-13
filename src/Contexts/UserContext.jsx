@@ -17,7 +17,7 @@ const AuthContext = createContext({
   signInWithGoogle: () => Promise,
 })
 
-export const useAuth = () => useContext(AuthContext)
+export const useUser = () => useContext(UserContext)
 
 export default function AuthContextProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null)
@@ -54,5 +54,5 @@ export default function AuthContextProvider({ children }) {
     logout,
     signInWithGoogle,
   }
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
