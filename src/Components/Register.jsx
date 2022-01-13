@@ -15,7 +15,9 @@ const Register = () => {
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
 
-    return signInWithPopup(Authenticate, provider)
+    return signInWithPopup(Authenticate, provider).then(
+      console.log(currentUser)
+    )
 
     // signInWithPopup(Authenticate, provider)
     //   .catch((err) => {
@@ -88,11 +90,14 @@ const Register = () => {
               ></input>
             </div>
             <div className='flex space-x-2 my-2 '>
-              <button disabled={loading || currentUser != null} onClick={signInWithGoogle} className={' disabled:opacity-50 disabled:cursor-not-allowed py-2 px-4 rounded inline-flex items-center font-medium tracking-wide text-white capitalize transition duration-200 transform bg-gray-900 hover:bg-gray-700 focus:ring-indigo-300 focus:ring-opacity-80 ease-in-out hover:scale-110 '}>
-                 <FcGoogle className='w-full h-5 ' />
-                
-              
-                
+              <button
+                disabled={loading || currentUser != null}
+                onClick={signInWithGoogle}
+                className={
+                  ' disabled:opacity-50 disabled:cursor-not-allowed py-2 px-4 rounded inline-flex items-center font-medium tracking-wide text-white capitalize transition duration-200 transform bg-gray-900 hover:bg-gray-700 focus:ring-indigo-300 focus:ring-opacity-80 ease-in-out hover:scale-110 '
+                }
+              >
+                <FcGoogle className='w-full h-5 ' />
               </button>
             </div>
 

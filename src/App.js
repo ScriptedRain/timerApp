@@ -5,6 +5,7 @@ import './index.css'
 import Sidebar from './Components/Sidebar'
 import { Calendar } from './Pages/Calendar'
 import Todo from './Pages/Todo'
+import AuthContextProvider from './Contexts/UserContext'
 
 function App() {
   return (
@@ -13,12 +14,14 @@ function App() {
         <Sidebar />
       </div>
       <Router>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/calendar' element={<Calendar />} />
-          <Route path='/todo' element={<Todo />} />
-        </Routes>
+        <AuthContextProvider>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/todo' element={<Todo />} />
+          </Routes>
+        </AuthContextProvider>
       </Router>
     </div>
   )
