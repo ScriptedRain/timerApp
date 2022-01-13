@@ -5,7 +5,7 @@ import { useAuth } from '../Contexts/UserContext'
 import Apitesting from './Apitesting'
 
 const Hero = () => {
-  const currentUser = useAuth()
+  const { currentUser } = useAuth()
 
   return (
     <Pattern>
