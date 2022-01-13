@@ -1,9 +1,11 @@
 import React from 'react'
 import Register from './Register'
 import Pattern from './Pattern'
+import { useAuth } from '../Contexts/UserContext'
 import Apitesting from './Apitesting'
+
 const Hero = () => {
-  const currentUser = useUser()
+  const currentUser = useAuth()
 
   return (
     <Pattern>
