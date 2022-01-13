@@ -46,6 +46,11 @@ const Sidebar = () => {
         text='Settings'
         to={'Settings'}
       />
+      <SideBarIcon
+        icon={<FiSettings size='28' top='90'/>}
+        text='Sign Up'
+        to={'SignUp'}
+      />
     </div>
   )
 }
