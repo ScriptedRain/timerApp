@@ -1,9 +1,9 @@
 import React from 'react'
 import Register from './Register'
-import { useAuth } from '../firebase-config'
 import Pattern from './Pattern'
+import { useUser } from '../Contexts/UserContext'
 const Hero = () => {
-  const currentUser = useAuth()
+  const currentUser = useUser()
 
   return (
     <Pattern>

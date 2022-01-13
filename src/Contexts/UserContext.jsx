@@ -1,9 +1,11 @@
 import { createContext, useContext, useState } from 'react'
 import { auth } from '../firebase-config'
 
-export const UserContext = createContext({})
+export const UserContext = createContext({
+  currentUser: null,
+})
 
-export const useAuth = () => useContext(AuthContext)
+export const useUser = () => useContext(UserContext)
 
 export default function AuthContextProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null)
@@ -11,5 +13,5 @@ export default function AuthContextProvider({ children }) {
   const value = {
     currentUser,
   }
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
