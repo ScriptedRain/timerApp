@@ -19,22 +19,22 @@ const Sidebar = () => {
       <SideBarIcon
         icon={<AiFillCalendar size='28' />}
         text='Calendar'
-        to={'Calendar'}
+        to={'Calendar (Coming Soon)'}
       />
       <SideBarIcon
         icon={<AiFillClockCircle size='28' />}
         text='Stopwatch/Timer'
-        to={'Timer'}
+        to={'Timer (Coming Soon)'}
       />
       <SideBarIcon
         icon={<BsCardChecklist size='28' />}
-        text='Reminders'
-        to={'Reminders'}
+        text='ToDo'
+        to={'ToDo'}
       />
       <SideBarIcon
         icon={<MdDashboard size='28' />}
         text='Board'
-        to={'Board'}
+        to={'Board (Coming Soon)'}
       />
       <SideBarIcon
         icon={<AiOutlineTeam size='28' />}
