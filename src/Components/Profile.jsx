@@ -1,8 +1,8 @@
 import React from 'react'
-import { useAuth } from '../Contexts/UserContext'
+// import { useAuth } from '../Contexts/UserContext'
 
 const Profile = () => {
-  const { currentUser } = useAuth()
+  // const { currentUser } = useAuth()
   return (
     <div>
       {/* <button
@@ -18,7 +18,9 @@ const Profile = () => {
           ></img>
         </div>
       </button> */}
-      <h1 className='text-center'>{JSON.stringify(currentUser, null, 2)}</h1>
+      
+      <h1 className="font-bold text-5xl text-center">Coming soon...</h1>
+
     </div>
   )
 }
