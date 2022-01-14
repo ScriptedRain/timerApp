@@ -57,12 +57,14 @@ const Settings = () => {
           )
         })}
         <input
+          className=' bg-gray-700 border-4 border-solid rounded px-2 '
           type='text'
+          placeholder='type...'
           onChange={(e) => {
             setName(e.target.value)
           }}
         />
-        <button onClick={createUser}>create</button>
+        <button className=' bg-gray-700 rounded' onClick={createUser}>create</button>
       </div>
     </div>
   )
