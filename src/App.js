@@ -16,13 +16,15 @@ function App() {
       </div>
       <Router>
         <AuthContextProvider>
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/calendar' element={<Calendar />} />
-            <Route path='/todo' element={<Todo />} />
-            <Route path='/settings' element={<Settings />} />
-          </Routes>
+          <firestoreContext>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/calendar' element={<Calendar />} />
+              <Route path='/todo' element={<Todo />} />
+              <Route path='/settings' element={<Settings />} />
+            </Routes>
+          </firestoreContext>
         </AuthContextProvider>
       </Router>
     </div>

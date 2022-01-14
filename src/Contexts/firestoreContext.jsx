@@ -5,9 +5,11 @@ const firestoreContext = createContext({
 
 export const useFirestore = () => useContext(firestoreContext)
 
-export default function firestoreContext({ children }) {
-  const createUserInDb = (collectionRef, id, name) => {
-    await addDoc(collectionRef, { name: name })
+export default async function firestoreContext({ children }) {
+  const createUserInDb = (db, collectionRef, id, name) => {
+    return await setDoc(doc(db, collectionRef, id), {
+      name: name,
+    })
   }
 
   const value = {
