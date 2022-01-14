@@ -3,6 +3,10 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import './index.css'
 import Sidebar from './Components/Sidebar'
+import { Calendar } from './Pages/Calendar'
+import Todo from './Pages/Todo'
+import AuthContextProvider from './Contexts/UserContext'
+import Settings from './Pages/Settings'
 
 function App() {
   return (
@@ -11,12 +15,15 @@ function App() {
         <Sidebar />
       </div>
       <Router>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-
-          <Route path='/About' element={<About />} />
-          <Route path='/Team'>{/* <Team /> */}</Route>
-        </Routes>
+        <AuthContextProvider>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/todo' element={<Todo />} />
+            <Route path='/settings' element={<Settings />} />
+          </Routes>
+        </AuthContextProvider>
       </Router>
     </div>
   )
