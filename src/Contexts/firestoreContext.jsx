@@ -1,13 +1,28 @@
 import { createContext, useContext, useState, useEffect } from 'react'
-const firestoreContext = createContext({
-  createUserInDb,
+import {
+  collection,
+  getDocs,
+  addDoc,
+  deleteDoc,
+  doc,
+  setDoc,
+} from 'firebase/firestore'
+
+const FirestoreContext = createContext({
+  createUserInDb: () => Promise,
 })
 
-export const useFirestore = () => useContext(firestoreContext)
+export const useFirestore = () => useContext(FirestoreContext)
 
-export default async function firestoreContext({ children }) {
-  const createUserInDb = (db, collectionRef, id, name) => {
-    return await setDoc(doc(db, collectionRef, id), {
+export default function FirestoreContextProvider({ children }) {
+  // const createUserInDb = (db, collectionRef, id, name) => {
+  //   return setDoc(doc(db, collectionRef, id), {
+  //     name: name,
+  //   })
+  // }
+
+  function createUserInDb(db, collectionRef, id, name) {
+    return setDoc(doc(db, collectionRef, id), {
       name: name,
     })
   }
@@ -16,8 +31,8 @@ export default async function firestoreContext({ children }) {
     createUserInDb,
   }
   return (
-    <firestoreContext.Provider value={value}>
+    <FirestoreContext.Provider value={value}>
       {children}
-    </firestoreContext.Provider>
+    </FirestoreContext.Provider>
   )
 }
