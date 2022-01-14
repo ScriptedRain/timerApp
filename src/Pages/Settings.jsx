@@ -19,15 +19,8 @@ const Settings = () => {
 
   const { currentUser } = useAuth()
   const { createUserInDb } = useFirestore()
-  const createUser = async () => {
-    // await addDoc(collectionRef, { name: name })
-    // await setDoc(doc(db, 'users', 'hookabar'), {
-    //   name: 'Los Angeles',
-    //   state: 'CA',
-    //   country: 'USA',
-    // })
-    await setDoc(doc(db, 'users', currentUser.uid), { name: name })
-    // await createUserInDb(db, 'users', currentUser?.id, name)
+  const createUser = () => {
+    createUserInDb(db, 'users', currentUser.uid, name)
   }
 
   const deleteUser = async (id) => {

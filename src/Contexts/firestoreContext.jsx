@@ -1,12 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react'
-import {
-  collection,
-  getDocs,
-  addDoc,
-  deleteDoc,
-  doc,
-  setDoc,
-} from 'firebase/firestore'
+import { doc, setDoc } from 'firebase/firestore'
 
 const FirestoreContext = createContext({
   createUserInDb: () => Promise,
