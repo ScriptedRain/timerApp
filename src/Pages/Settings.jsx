@@ -9,21 +9,19 @@ import {
   doc,
   setDoc,
 } from 'firebase/firestore'
-import { useAuth } from '../Contexts/UserContext'
 
 const Settings = () => {
   const [name, setName] = useState('')
   const [users, setUsers] = useState([])
   const collectionRef = collection(db, 'users')
-  const { currentUser } = useAuth()
 
   const createUser = async () => {
-    // await addDoc(collectionRef, { name: name })
-    await setDoc(doc(db, 'users', currentUser.uid), {
-      name: 'Los Angeles',
-      state: 'CA',
-      country: 'USA',
-    })
+    await addDoc(collectionRef, { name: name })
+    // await setDoc(doc(db, 'users', currentUser.uid), {
+    //   name: 'Los Angeles',
+    //   state: 'CA',
+    //   country: 'USA',
+    // })
   }
 
   const deleteUser = async (id) => {
