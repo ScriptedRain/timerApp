@@ -7,10 +7,7 @@ import { useAuth } from '../Contexts/UserContext'
 const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const { currentUser, register, login } = useAuth()
-
-  const { signInWithGoogle } = useAuth()
-  const { logout } = useAuth()
+  const { currentUser, register, login, logout, signInWithGoogle } = useAuth()
 
   return (
     <div className='flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0'>
