@@ -32,9 +32,10 @@ const Settings = () => {
     const getUsers = async () => {
       const data = await getDocs(collectionRef)
       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      console.log(users)
     }
     getUsers()
-  }, [users])
+  },)
   return (
     <div className='pattern'>
       <Profile />
