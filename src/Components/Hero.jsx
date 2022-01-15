@@ -1,7 +1,7 @@
 import React from 'react'
 import Pattern from './Pattern'
 import { useAuth } from '../Contexts/UserContext'
-import Apitesting from './Apitesting'
+import Register from './Register'
 
 const Hero = () => {
   const { currentUser } = useAuth()
@@ -25,7 +25,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <Apitesting />
+      <Register />
     </Pattern>
   )
 }
