@@ -90,7 +90,7 @@ const Register = () => {
                 }
               >
                 <AiOutlineGoogle className=' h-5 ' />
-                <div className='ml-2'>Sign in with google</div>
+                <div className='ml-3'>Sign in with google</div>
               </button>
             </div>
           </form>
